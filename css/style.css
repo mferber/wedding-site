@@ -1,0 +1,59 @@
+@font-face {
+    font-family: gorey;
+    src: url(fonts/Gorey.ttf);
+}
+
+* {
+    font-family: gorey;
+}
+
+img#engagement-photo {
+	text-align: center;
+	width: 400px;
+}
+
+body {
+	max-width: 600px;
+	margin: 0 auto 5em auto !important;
+	float: none !important;
+}
+
+h2 {
+	margin-top: 1.5em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+#homepage {
+	text-align: center;
+	font-size: 16pt;
+}
+
+#homepage form#emailSignup {
+	margin: 1em 0 1em 0;
+	padding: 1em;
+	border: 2px solid black;
+	background-color: #ddd;
+}
+
+#homepage form#emailSignup div {
+	text-align: left;
+}
+
+#homepage form#emailSignup label {
+	width: 10em;
+	display: inline-block;
+	text-align: right;
+	margin-right: 1em;
+}
+
+#homepage form#emailSignup input {
+	text-align: left;
+}
+
+#homepage form#emailSignup input[type='text'] {
+	width: 30em;
+}
+
