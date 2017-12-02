@@ -1,0 +1,12 @@
+# Protect dev area against prying eyes
+
+AuthName "Dev area authenticate"
+AuthType Basic
+<IfDefine dev>
+    AuthUserFile /var/www/html/dev/.htpasswd
+</IfDefine>
+<IfDefine !dev>
+    AuthUserFile /home/fergley/fergleywedding.com/dev/.htpasswd
+</IfDefine>
+Require valid-user
+
