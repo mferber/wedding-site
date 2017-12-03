@@ -10,3 +10,4 @@ AuthType Basic
 </IfDefine>
 Require valid-user
 
+AddHandler cgi-script .cgi
