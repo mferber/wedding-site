@@ -12,9 +12,37 @@
         <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
         <![endif]-->
+
+        <script>
+            function writeMAFEmailLink() {
+                document.write('<a href="ma');
+                document.write('ilto');
+                document.write(':');
+                document.write('matthias.ferber');
+                document.write('@');
+                document.write('gma');
+                document.write('il.');
+                document.write('com');
+                document.write('">Matthias</a>');
+            }
+            function writeRAWEmailLink() {
+                document.write('<a href="ma');
+                document.write('ilto');
+                document.write(':');
+                document.write('rebecca.wrigley');
+                document.write('@');
+                document.write('gma');
+                document.write('il.');
+                document.write('com');
+                document.write('">Rebecca</a>');
+            }
+
+        </script>
     </head>
 
     <body>
+
+        <a href="mailto:honeypot@mailinator.com" aria-hidden="true" tabindex="-1" style="display: none;">honeypot@mailinator.com</a>
 
         <div id="homepage">
 
@@ -27,6 +55,23 @@
                 />
 
                 <p>On this website, everything you want to know about the Rebecca Wrigley–Matthias Ferber wedding will one day appear.</p>
+
+                <div class="emailSignup">
+
+                    <p class="heading">Mailing list</p>
+
+                    <p>Please check back in a day or two to sign up for future email updates. I'm working on it! I have other responsibilities, you know!</p>
+
+                </div>
+
+                <div class="contact">
+                    <p>Questions? Email us:</p>
+
+                    <ul class="contactEmail">
+                        <li><script>writeMAFEmailLink();</script></li>
+                        <li><script>writeRAWEmailLink()</script></li>
+                    </ul>
+                </div>
 
                 <!--
 
@@ -47,46 +92,8 @@
                 -->
             </div>
 
-<!--
-            <div id="basics" style="clear: both">
-                <h2>The Basic Information</h2>
-
-                <div>
-                    <b>Who:</b> Rebecca and Matthias, and hopefully you!
-                </div>
-                <div>
-                    <b>When:</b> Saturday evening, April 28, 2018
-                </div>
-                <div>
-                    <b>Where:</b> Boston, Mass.
-                </div>
-                <div>
-                    <b>Yes but where exactly?:</b> To be announced!
-                </div>
-                <div>
-                    <b>Why:</b> It seemed like a good idea?
-                </div>
-                <div>
-                    <b>How:</b> Very carefully.
-                </div>
-            </div>
-
-            <div id="aftermath">
-                <h2>The Aftermath</h2>
-
-                <p>
-                    We are hoping to spend a couple of days after the wedding relaxing in Yarmouth Port on Cape Cod, and we hope to be able to invite any of our guests who are able and interested to join us.  More details will be supplied if and when we start figuring this thing out.
-                </p>
-
-                <p>
-                    (Why Yarmouth Port?  This town on Cape Cod is where we got engaged, under a famous and venerable <a href="http://www.wickedlocal.com/x1342178056/Big-is-beautiful-Yarmouth-Port-tree-in-history-and-legend">Weeping Beech tree</a>.  Mere yards from the tree is the <a href="http://www.edwardgoreyhouse.org">Edward Gorey House &amp; Museum</a>, one of our favorite places in the world.  We look forward to taking a little time there to unwind and perhaps share these special places with our guests.)
-                </div>
-            </div>
-
--->
-
         </div>
 
-        <script src="js/scripts.js"></script>
+        <!--<script src="js/scripts.js"></script>-->
     </body>
 </html>

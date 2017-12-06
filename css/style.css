@@ -31,29 +31,48 @@ p {
 	font-size: 16pt;
 }
 
-#homepage form#emailSignup {
+#homepage .emailSignup {
 	margin: 1em 0 1em 0;
 	padding: 1em;
 	border: 2px solid black;
 	background-color: #ddd;
 }
 
-#homepage form#emailSignup div {
+#homepage .emailSignup .heading {
+	font-size: 125%;
+	font-weight: bold;
+}
+
+
+#homepage form.emailSignup div {
 	text-align: left;
 }
 
-#homepage form#emailSignup label {
+#homepage form.emailSignup label {
 	width: 10em;
 	display: inline-block;
 	text-align: right;
 	margin-right: 1em;
 }
 
-#homepage form#emailSignup input {
+#homepage form.emailSignup input {
 	text-align: left;
 }
 
-#homepage form#emailSignup input[type='text'] {
+#homepage form.	emailSignup input[type='text'] {
 	width: 30em;
 }
 
+ul.contactEmail {
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.contactEmail li {
+	display: inline;
+	list-style-type: none;
+}
+
+ul.contactEmail li + li::before {
+	content: ' • ';
+}
