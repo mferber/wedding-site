@@ -41,8 +41,7 @@ begin
     client = Mysql2::Client.new(:host => config['host'], :username => config['username'],
         :password => config['password'], :database => config['db'])
     insert = "INSERT INTO email (name, email) VALUES ('#{client.escape(name)}', '#{client.escape(email1)}')"
-
-    client.query("insert into email (name, email) values ('a', 'b')")
+    client.query(insert)
 rescue Exception => e
     failRequest(cgi, "DB-ERROR:#{e}")
 end

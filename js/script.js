@@ -30,6 +30,8 @@ function failure(xhr, textStatus, error) {
 		response.text('Email addresses didn\'t match — check your input!');
 	} else if (message.startsWith('CONFIG-ERROR:')) {
 		response.text('Oops, something\'s wrong with the site: ' + message.substring(13));
+	} else if (message.startsWith('DB-ERROR:')) {
+		response.text('Oops, something\'s wrong with the database. ("' + message.substring(9) + '")');
 	} else {
 		response.text('Something went wrong: ' + message);
 	}
