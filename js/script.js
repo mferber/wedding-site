@@ -5,7 +5,7 @@ function setup() {
 			email1: $('input#email1').val(),
 			email2: $('input#email2').val()
 		};
-		var url = "maint/add.cgi?" + $.param(params);
+		var url = "add.cgi?" + $.param(params);
 		$.get(url).done(success).fail(failure);
 	});
 }
@@ -28,6 +28,8 @@ function failure(xhr, textStatus, error) {
 		response.text('Please fill in all the fields!');
 	} else if (message.startsWith('EMAIL-MISMATCH')) {
 		response.text('Email addresses didn\'t match — check your input!');
+	} else if (message.startsWith('CONFIG-ERROR:')) {
+		response.text('Oops, something\'s wrong with the site: ' + message.substring(13));
 	} else {
 		response.text('Something went wrong: ' + message);
 	}

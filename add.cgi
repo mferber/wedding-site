@@ -31,7 +31,7 @@ validateParams(cgi, name, email1, email2)
 validateEmailMatches(cgi, email1, email2)
 
 begin
-    configFile = json = File.read('../conf/config.json')
+    configFile = json = File.read('conf/config.json')
     config = JSON.parse(json)
 rescue Exception => e
     failRequest(cgi, "CONFIG-ERROR:#{e}")
