@@ -16,27 +16,46 @@
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
-            function writeMAFEmailLink() {
+            function writeMailtoLink(text, addrWriter) {
                 document.write('<a href="ma');
                 document.write('ilto');
                 document.write(':');
+                addrWriter();
+                document.write('"">');
+                document.write(text);
+                document.write('</a>');
+            }
+
+            function writeMAFEmail() {
                 document.write('matthias.ferber');
                 document.write('@');
                 document.write('gma');
                 document.write('il.');
                 document.write('com');
-                document.write('">Matthias</a>');
             }
-            function writeRAWEmailLink() {
-                document.write('<a href="ma');
-                document.write('ilto');
-                document.write(':');
+
+            function writeRAWEmail() {
                 document.write('rebecca.wrigley');
                 document.write('@');
                 document.write('gma');
                 document.write('il.');
                 document.write('com');
-                document.write('">Rebecca</a>');
+            }
+
+            function writeMAFEmailLink() {
+                writeMailtoLink('Matthias', writeMAFEmail);
+            }
+
+            function writeRAWEmailLink() {
+                writeMailtoLink('Rebecca', writeRAWEmail);
+            }
+
+            function writeBothEmailLink() {
+                writeMailtoLink('Both of us', function() {
+                    writeMAFEmail();
+                    document.write(',');
+                    writeRAWEmail();
+                })
             }
 
         </script>
@@ -84,6 +103,7 @@
                     <ul class="contactEmail">
                         <li><script>writeMAFEmailLink();</script></li>
                         <li><script>writeRAWEmailLink()</script></li>
+                        <li><script>writeBothEmailLink()</script></li>
                     </ul>
                 </div>
 
