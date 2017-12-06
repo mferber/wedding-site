@@ -7,12 +7,14 @@
         <title>The Fergley Wedding</title>
         <meta name="description" content="Matthias Ferber &amp; Rebecca Wrigley's wedding site">
 
+        <link rel="stylesheet" href="css/reset.css?v=1.0">
         <link rel="stylesheet" href="css/style.css?v=1.0">
 
         <!--[if lt IE 9]>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
         <![endif]-->
 
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script>
             function writeMAFEmailLink() {
                 document.write('<a href="ma');
@@ -54,14 +56,26 @@
                     title="Matthias &amp; Rebecca, under the Weeping Beech tree where we got engaged"
                 />
 
-                <p>On this website, everything you want to know about the Rebecca Wrigley–Matthias Ferber wedding will one day appear.</p>
+                <p class="description">On this website, everything you want to know about the Rebecca Wrigley–Matthias Ferber wedding will one day appear.</p>
 
                 <div class="emailSignup">
+                    <form>
+                        <p class="heading">Mailing list signup</p>
 
-                    <p class="heading">Mailing list</p>
+                        <p class="caption">Give us your contact information here and we’ll let you know when we have important information to share.</p>
 
-                    <p>Please check back in a day or two to sign up for future email updates. I'm working on it! I have other responsibilities, you know!</p>
+                        <div class="fields">
+                            <label for="name">Your name:</label>
+                            <input type="text" id="name" name="name" />
+                            <label for="email">Your email address:</label>
+                            <input type="text" id="email1" name="email1" />
+                            <label for="email">Type your email again:</label>
+                            <input type="text" id="email2" name="email2" />
+                            <input type="button" id="submitBtn" value="Keep me posted!" />
+                        </div>
+                    </form>
 
+                    <div id="emailSignupResponse"></div>
                 </div>
 
                 <div class="contact">
@@ -73,27 +87,15 @@
                     </ul>
                 </div>
 
-                <!--
-
-                <p>For now, please sign up here for email updates as news develops!</p>
-
-                <form id="emailSignup">
-                    <div>
-                        <label for="name">Your name:</label><input type="text" id="name" name="name" />
-                    </div>
-                    <div>
-                        <label for="email">Your email address:</label><input type="text" id="email" name="email" />
-                    </div>
-                    <div>
-                        <label> </label><input type="submit" value="Keep me posted!" />
-                    </div>
-                </form>
-
-                -->
             </div>
 
         </div>
 
-        <!--<script src="js/scripts.js"></script>-->
+        <script src="js/script.js"></script>
+        <script>
+            $(function() {
+                setup();
+            });
+        </script>
     </body>
 </html>
