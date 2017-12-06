@@ -5,7 +5,7 @@
 
 body {
 	max-width: 600px;
-	margin: 1em auto 3em auto;
+	margin: 1em auto 1em auto;
     font-family: gorey;
 	line-height: 1.5;	
 }
@@ -82,16 +82,21 @@ img#engagement-photo {
 	color: red;
 }
 
-ul.contactEmail {
+#homepage ul.contactEmail {
 	padding: 0;
 	list-style-type: none;
 }
 
-ul.contactEmail li {
+#homepage ul.contactEmail li {
 	display: inline;
 	list-style-type: none;
 }
 
-ul.contactEmail li + li::before {
+#homepage ul.contactEmail li + li::before {
 	content: ' • ';
+}
+
+.footnotes {
+	font-size: 70%;
+	margin-top: 3em;
 }
