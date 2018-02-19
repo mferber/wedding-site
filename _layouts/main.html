@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>{% if page.title != nil %}{{page.title}} &mdash; {% endif %}The Fergley Wedding</title>
+        <meta name="description" content="Matthias Ferber &amp; Rebecca Wrigley's wedding site">
+
+        <link rel="stylesheet" href="css/reset.css?v=1.0">
+        <link rel="stylesheet" href="css/style.css?v=1.0">
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    </head>
+
+    <body class="page-{{page.id}}{% if page.id != "home" %} secondary{% endif %}">
+        {% if page.id != "home" %}
+            {% include subpage-header.html page-title=page.title %}
+        {% endif %}
+
+        {{ content }}
+    </body>
+</html>

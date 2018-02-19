@@ -1,130 +1,117 @@
-<!doctype html>
+---
+id: home
+---
+<script>
+    function writeMailtoLink(text, addrWriter) {
+        document.write('<a href="ma');
+        document.write('ilto');
+        document.write(':');
+        addrWriter();
+        document.write('"">');
+        document.write(text);
+        document.write('</a>');
+    }
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
+    function writeMAFEmail() {
+        document.write('matthias.ferber');
+        document.write('@');
+        document.write('gma');
+        document.write('il.');
+        document.write('com');
+    }
 
-        <title>The Fergley Wedding</title>
-        <meta name="description" content="Matthias Ferber &amp; Rebecca Wrigley's wedding site">
+    function writeRAWEmail() {
+        document.write('rebecca.wrigley');
+        document.write('@');
+        document.write('gma');
+        document.write('il.');
+        document.write('com');
+    }
 
-        <link rel="stylesheet" href="css/reset.css?v=1.0">
-        <link rel="stylesheet" href="css/style.css?v=1.0">
+    function writeMAFEmailLink() {
+        writeMailtoLink('Matthias', writeMAFEmail);
+    }
 
-        <!--[if lt IE 9]>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-        <![endif]-->
+    function writeRAWEmailLink() {
+        writeMailtoLink('Rebecca', writeRAWEmail);
+    }
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script>
-            function writeMailtoLink(text, addrWriter) {
-                document.write('<a href="ma');
-                document.write('ilto');
-                document.write(':');
-                addrWriter();
-                document.write('"">');
-                document.write(text);
-                document.write('</a>');
-            }
+    function writeBothEmailLink() {
+        writeMailtoLink('Both of us', function() {
+            writeMAFEmail();
+            document.write(',');
+            writeRAWEmail();
+        })
+    }
 
-            function writeMAFEmail() {
-                document.write('matthias.ferber');
-                document.write('@');
-                document.write('gma');
-                document.write('il.');
-                document.write('com');
-            }
+</script>
 
-            function writeRAWEmail() {
-                document.write('rebecca.wrigley');
-                document.write('@');
-                document.write('gma');
-                document.write('il.');
-                document.write('com');
-            }
+<a href="mailto:honeypot@mailinator.com" aria-hidden="true" tabindex="-1" style="display: none;">honeypot@mailinator.com</a>
 
-            function writeMAFEmailLink() {
-                writeMailtoLink('Matthias', writeMAFEmail);
-            }
+<div>
 
-            function writeRAWEmailLink() {
-                writeMailtoLink('Rebecca', writeRAWEmail);
-            }
+    <div id="main">
+        <div class="site-main-title">The Fergley Wedding</div>
 
-            function writeBothEmailLink() {
-                writeMailtoLink('Both of us', function() {
-                    writeMAFEmail();
-                    document.write(',');
-                    writeRAWEmail();
-                })
-            }
+        <img id="main-photo" src="us.jpg"
+            alt="Matthias &amp; Rebecca"
+            title="Matthias &amp; Rebecca, under the Weeping Beech tree where we got engaged"
+        />
 
-        </script>
-    </head>
-
-    <body>
-
-        <a href="mailto:honeypot@mailinator.com" aria-hidden="true" tabindex="-1" style="display: none;">honeypot@mailinator.com</a>
-
-        <div id="homepage">
-
-            <div id="main">
-                <h1 class="pageTitle">The Fergley Wedding</h1>
-
-                <img id="engagement-photo" src="us.jpg"
-                    alt="Matthias &amp; Rebecca"
-                    title="Matthias &amp; Rebecca, under the Weeping Beech tree where we got engaged"
-                />
-
-                <p class="description">On this website, everything you want to know about the Rebecca Wrigley–Matthias Ferber wedding will one day appear.</p>
-
-                <div class="emailSignup">
-                    <form>
-                        <p class="heading">Mailing list signup</p>
-
-                        <p class="caption">Give us your contact information here and we’ll let you know when we have important information to share.</p>
-
-                        <div class="fields">
-                            <label for="name">Your name</label>
-                            <input type="text" id="name" name="name" />
-                            <label for="email">Your email address</label>
-                            <input type="text" id="email1" name="email1" />
-                            <label for="email">Type your email again</label>
-                            <input type="text" id="email2" name="email2" />
-                            <input type="button" id="submitBtn" value="Keep me posted!" />
-                        </div>
-                    </form>
-
-                    <div id="emailSignupResponse"></div>
-                </div>
-
-                <div class="contact">
-                    <p>Questions? Email us:</p>
-
-                    <ul class="contactEmail">
-                        <li><script>writeMAFEmailLink();</script></li>
-                        <li><script>writeRAWEmailLink()</script></li>
-                        <li><script>writeBothEmailLink()</script></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footnotes">
-                <p>
-                    This wedding and typeface brought to you by <a href="https://www.abebooks.com/books/illustrator-gashlycrumb-tinies-doubtful-guest/edward-gorey.shtml">Edward Gorey</a>.
-                </p>
-                <p>
-                    (<a href="http://the-toast.net/2015/08/17/how-to-tell-if-youre-in-edward-gorey/">How to Tell If You’re in an Edward Gorey Book</a>)
-                </p>
-            </div>
-
+        <div class="site-subtitle">
+            <div>April 28, 2018</div>
+            <div>The Waterworks Museum, Boston, Mass.</div>
         </div>
 
-        <script src="js/script.js"></script>
-        <script>
-            $(function() {
-                setup();
-            });
-        </script>
-    </body>
-</html>
+        <div class="main-nav-menu">
+            <ul>
+                <li><a href="event.html">Basic information</a></li>
+                <li><a href="venue.html">About the venue</a></li>
+                <li><a href="transportation.html">Getting around</a></li>
+                <li><a href="lodging.html">Where to stay</a></li>
+                <li><a href="boston.html">Things to do in Boston</a></li>
+                <li><a href="registry.html">Registry</a></li>
+                <li><a href="faq.html">F.A.Q.</a></li>
+            </ul>
+        </div>
+
+        <div class="emailSignup">
+            <form>
+                <p class="heading">Mailing list signup</p>
+
+                <p class="caption">Give us your contact information here and we’ll let you know when we have important information to share.</p>
+
+                <div class="fields">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" />
+                    <label for="email">Your email address</label>
+                    <input type="text" id="email1" name="email1" />
+                    <label for="email">Type your email again</label>
+                    <input type="text" id="email2" name="email2" />
+                    <input type="button" id="submitBtn" value="Keep me posted!" />
+                </div>
+            </form>
+
+            <div id="emailSignupResponse"></div>
+        </div>
+
+        <div class="contact">
+            <p>Questions? Email us:</p>
+
+            <ul class="contactEmail">
+                <li><script>writeMAFEmailLink();</script></li>
+                <li><script>writeRAWEmailLink()</script></li>
+                <li><script>writeBothEmailLink()</script></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+<script>
+    $(function() {
+        setup();
+    });
+</script>

@@ -1,0 +1,216 @@
+/* --- Custom fonts --- */
+
+@font-face {
+    font-family: gorey;
+    src: url(fonts/Gorey.ttf);
+}
+
+@font-face {
+    font-family: "doves type pro";
+    src: url(fonts/DovesTypPro.otf);
+}
+
+
+/* --- Basic shared formatting --- */
+
+html {
+    font-family: "doves type pro";
+    font-size: 20px;
+}
+
+body {
+    max-width: 1000px;
+    margin: 1em;
+}
+
+p {
+    line-height: 1.25;
+    font-size: 125%;
+}
+
+p + p {
+    margin-top: 1em;
+}
+
+h1 {
+    font-family: gorey;
+    font-size: 200%;
+}
+
+h2 {
+    font-family: gorey;
+    font-size: 150%;
+    margin-top: 1.5em;
+}
+
+a {
+    color: #208708;
+}
+
+
+/* --- Home page --- */
+
+body.page-home {
+    background-image: url("/assets/bg/home.png");
+    background-repeat: repeat-x;
+
+    .site-main-title {
+        font-family: gorey;
+        font-size: 200%;
+        color: white;
+    }
+
+    #main-photo {
+        float: right;
+        width: 25em;
+        border: 1px solid white;
+    }
+
+    .site-subtitle {
+        font-family: gorey;
+        font-size: 120%;
+        color: white;
+        margin-top: 0.5em;
+        margin-bottom: 2em;
+        line-height: 1.25;
+    }
+
+    .main-nav-menu {
+        font-family: gorey;
+        font-size: 125%;
+
+        li {
+            background: url('/assets/home-page-bullet-temporary.png') left center no-repeat;
+            padding-left: 50px;
+            height: 50px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 0.5em;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .emailSignup {
+        clear: both;
+        margin: 1em 0 1em 0;
+        padding: 0.25em;
+        border: 2px solid black;
+        background-color: #bdc;
+
+        .heading {
+            font-family: gorey;
+            font-size: 150%;
+            font-weight: bold;
+            margin: 0.5em 0;
+        }
+
+        .caption {
+            font-size: 110%;
+        }
+
+        .fields {
+            margin-top: 0.5em;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type='text'] {
+            display: block;
+            width: 80%;
+            margin: 0 auto 1em auto;
+            font-family: "doves type pro";
+            font-size: 100%;
+        }
+
+        input[type='button'] {
+            font-size: 100%;;
+        }
+    }
+
+    #emailSignupResponse {
+        margin: 0.5em 0 1em 0;
+        font-size: 120%;
+    }
+
+    #emailSignupResponse.success {
+        color: green;
+    }
+
+    #emailSignupResponse.failure {
+        color: red;
+    }
+
+    ul.contactEmail {
+        padding: 0;
+        list-style-type: none;
+    
+        li {
+            display: inline;
+            list-style-type: none;
+        }
+
+        li + li::before {
+            content: ' • ';
+        }
+    }
+}
+
+
+/* --- Secondary pages --- */
+
+body[class *= 'secondary'] {
+    background-image: url("/assets/bg/secondary.png");
+    background-repeat: repeat-x;
+
+    .secondary-nav-menu {
+        font-size: 90%;
+        font-family: "gorey";
+        color: white;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .secondary-page-title {
+        font-family: "gorey";
+        font-size: 175%;
+        color: white;
+        margin-top: 0.3em;
+        margin-bottom: 1em;
+    }
+
+}
+
+
+
+/* Mobile adjustments */
+
+@media only screen and (max-device-width: 736px) {
+    html {
+        font-size: 40px;
+    }
+
+    body {
+        max-width: 90%;
+    }
+
+    img#engagement-photo {
+        width: 90%;;
+        margin: 1em auto;
+    }
+}
