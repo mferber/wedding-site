@@ -209,6 +209,30 @@ body[class *= 'secondary'] {
 }
 
 
+/* --- Special treatment for FAQs --- */
+
+body[class *= 'page-faq'] {
+
+    .faq-q p {
+        font-weight: bold;
+        font-size: 150%;
+        margin-bottom: 0.5em;
+    }
+
+    .faq + .faq {
+        margin-top: 1em;
+    }
+
+    /* Insert Q. and A. before questions and answers */
+    .faq-q p:before {
+        content: "Q. ";
+    }
+    .faq-a p:first-child:before {
+        content: "A. ";
+    }
+
+}
+
 
 /* Mobile adjustments */
 
