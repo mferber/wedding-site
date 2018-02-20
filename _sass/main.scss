@@ -1,4 +1,9 @@
-/* --- Custom fonts --- */
+// --- Variables ---
+
+$base-font-size: 100%;
+$color-bg: #20AB00;   // theme green
+
+// --- Custom fonts ---
 
 @font-face {
     font-family: gorey;
@@ -10,12 +15,24 @@
     src: url(fonts/DovesTypPro.otf);
 }
 
+@font-face {
+    font-family: "doves type pro";
+    src: url(fonts/DovesTypPro-Italic.otf);
+    font-style: oblique;
+}
 
-/* --- Basic shared formatting --- */
+@font-face {
+    font-family: "doves type pro";
+    src: url(fonts/DovesTypPro-Italic.otf);
+    font-style: italic;
+}
+
+
+// --- Basic shared formatting ---
 
 html {
     font-family: "doves type pro";
-    font-size: 20px;
+    font-size: $base-font-size;
     font-variant-numeric: oldstyle-nums;
 }
 
@@ -26,22 +43,11 @@ body {
 
 p {
     line-height: 1.25;
-    font-size: 125%;
+    font-size: 140%;
 }
 
 p + p {
     margin-top: 1em;
-}
-
-h1 {
-    font-family: gorey;
-    font-size: 200%;
-}
-
-h2 {
-    font-family: gorey;
-    font-size: 150%;
-    margin-top: 1.5em;
 }
 
 a {
@@ -55,8 +61,15 @@ img.frieze {
     bottom:0%;
 }
 
+// Mobile adjustments
 
-/* --- Home page --- */
+@media screen and (max-device-width: 736px) {
+    html {
+        font-size: 40px;
+    }
+}
+
+// --- Home page ---
 
 body.page-home {
     background-image: url("/assets/bg/home.png");
@@ -64,28 +77,42 @@ body.page-home {
 
     .site-main-title {
         font-family: gorey;
-        font-size: 200%;
+        font-size: 280%;
         color: white;
-    }
-
-    .main-photo {
-        float: right;
-        width: 25em;
-        border: 1px solid white;
     }
 
     .site-subtitle {
         font-family: gorey;
-        font-size: 120%;
+        font-size: 165%;
         color: white;
-        margin-top: 0.5em;
-        margin-bottom: 2em;
         line-height: 1.25;
+    }
+
+    .site-subtitle.desktop {
+        margin-top: 0.5em;
+        margin-bottom: 0.75em;
+    }
+
+    .site-subtitle.mobile {
+        display: none;
+    }
+
+    .main-photo {
+        float: right;
+        width: 30em;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+
+    .main-photo.mobile {
+        display: none;
     }
 
     .main-nav-menu {
         font-family: gorey;
-        font-size: 125%;
+        font-size: 190%;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
 
         li {
             background: url('/assets/home-page-bullet-temporary.png') left center no-repeat;
@@ -112,13 +139,19 @@ body.page-home {
 
         .heading {
             font-family: gorey;
-            font-size: 150%;
+            font-size: 175%;
             font-weight: bold;
-            margin: 0.5em 0;
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
         }
 
         .caption {
-            font-size: 110%;
+            font-family: "doves type pro";
+            font-size: 150%;
+            text-align: center;
+            margin: 0 auto 1em auto;
+            width: 80%;
         }
 
         .fields {
@@ -128,14 +161,17 @@ body.page-home {
 
         label {
             display: block;
+            font-size: 150%;
         }
 
-        input[type='text'] {
+        input[type='text'], input[type='email'] {
             display: block;
             width: 80%;
             margin: 0 auto 1em auto;
             font-family: "doves type pro";
-            font-size: 100%;
+            font-size: 150%;
+            padding: 0.25em;
+            border-radius: 0.25em;
         }
 
         input[type='button'] {
@@ -171,17 +207,72 @@ body.page-home {
     }
 }
 
+// Mobile adjustments
 
-/* --- Secondary pages --- */
+@media screen and (max-device-width: 736px) {
+
+    body.page-home {
+        background-size: 1px 600px;
+
+        .site-main-title, .site-subtitle {
+            font-size: 200%;
+            text-align: center;
+        }
+
+        .main-photo.desktop {
+            display: none;
+        }
+
+        .main-photo.mobile {
+            display: block;
+            float: none;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+            border-width: 5px;
+
+        }
+
+        .site-subtitle.mobile {
+            display: block;
+            font-size: 150%;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .site-subtitle.desktop {
+            display: none;
+        }
+
+        .main-nav-menu {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 165%;
+
+            li {
+                height: 200%;
+                padding-left: 0;
+                background: transparent;
+            }
+        }
+
+        .emailSignup .caption {
+            width: 90%;
+        }
+    }
+}
+
+// --- Secondary pages ---
 
 body[class *= 'secondary'] {
     background-image: url("/assets/bg/secondary.png");
     background-repeat: repeat-x;
 
     .secondary-nav-menu {
-        font-size: 90%;
+        font-size: 110%;
         font-family: "gorey";
         color: white;
+        margin-top: 1em;
 
         a {
             color: white;
@@ -195,22 +286,57 @@ body[class *= 'secondary'] {
 
     .secondary-page-title {
         font-family: "gorey";
-        font-size: 175%;
+        font-size: 180%;
         color: white;
-        margin-top: 0.3em;
-        margin-bottom: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 1.25em;
     }
 
     .main-photo {
         float: right;
-        width: 25em;
-        border: 1px solid white;
-        margin-top: 0.5em;
+        width: 30em;
+        margin-top: 1em;
+        border: 2px solid white;
+        border-radius: 20px;
+
     }
 }
 
+// Mobile adjustments
 
-/* --- Special treatment for FAQs --- */
+@media screen and (max-device-width: 736px) {
+
+    body[class *= 'secondary'] {
+        background-image: url("/assets/bg/secondary.png");   // FIXME - do this properly
+        background-size: 1px 500px;
+
+        .secondary-nav-menu {
+            text-align: center;
+            font-size: 120%;
+            line-height: 1.5;
+        }
+
+        .main-photo {
+            float: none;
+            display: block;
+            width: 90%;
+            margin: 0.5em auto 1em auto;
+            border: 5px solid white;
+            border-radius: 20px;
+        }
+
+        .secondary-page-title {
+            text-align: center;
+            font-size: 180%;
+            color: $color-bg;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+    }
+
+}
+
+// --- Special treatment for FAQs ---
 
 body[class *= 'page-faq'] {
 
@@ -233,22 +359,4 @@ body[class *= 'page-faq'] {
         content: "A. ";
     }
 
-}
-
-
-/* Mobile adjustments */
-
-@media only screen and (max-device-width: 736px) {
-    html {
-        font-size: 40px;
-    }
-
-    body {
-        max-width: 90%;
-    }
-
-    img#engagement-photo {
-        width: 90%;;
-        margin: 1em auto;
-    }
 }

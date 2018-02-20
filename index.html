@@ -53,15 +53,26 @@ id: home
     <div id="main">
         <div class="site-main-title">The Fergley Wedding</div>
 
-        <img class="main-photo" src="us.jpg"
+        <img class="main-photo desktop" src="us.jpg"
             alt="Matthias &amp; Rebecca"
             title="Matthias &amp; Rebecca, under the Weeping Beech tree where we got engaged"
         />
 
-        <div class="site-subtitle">
+        <div class="site-subtitle desktop">
             <div>April 28, 2018</div>
             <div>The Waterworks Museum, Boston, Mass.</div>
         </div>
+
+        <div class="site-subtitle mobile">
+            <div>April 28, 2018</div>
+            <div>The Waterworks Museum</div>
+            <div>Boston, Mass.</div>
+        </div>
+
+        <img class="main-photo mobile" src="us.jpg"
+            alt="Matthias &amp; Rebecca"
+            title="Matthias &amp; Rebecca, under the Weeping Beech tree where we got engaged"
+        />
 
         <div class="main-nav-menu">
             <ul>
@@ -72,6 +83,7 @@ id: home
                 <li><a href="boston.html">Things to do in Boston</a></li>
                 <li><a href="registry.html">Registry</a></li>
                 <li><a href="faq.html">F.A.Q.</a></li>
+                <li><a href="contact.html">Contact us</a></li>
             </ul>
         </div>
 
@@ -79,17 +91,17 @@ id: home
 
         <div class="emailSignup">
             <form>
-                <p class="heading">Mailing list signup</p>
+                <div class="heading">Mailing list signup</div>
 
-                <p class="caption">Give us your contact information here and we’ll let you know when we have important information to share.</p>
+                <div class="caption">Give us your contact information here and we’ll let you know when we have important information to share.</div>
 
                 <div class="fields">
                     <label for="name">Your name</label>
                     <input type="text" id="name" name="name" />
                     <label for="email">Your email address</label>
-                    <input type="text" id="email1" name="email1" />
+                    <input type="email" id="email1" name="email1" />
                     <label for="email">Type your email again</label>
-                    <input type="text" id="email2" name="email2" />
+                    <input type="email" id="email2" name="email2" />
                     <input type="button" id="submitBtn" value="Keep me posted!" />
                 </div>
             </form>
