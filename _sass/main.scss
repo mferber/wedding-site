@@ -215,8 +215,9 @@ body[class *= 'secondary'] {
 body[class *= 'page-faq'] {
 
     .faq-q p {
+        font-family: gorey;
         font-weight: bold;
-        font-size: 150%;
+        font-size: 125%;
         margin-bottom: 0.5em;
     }
 
