@@ -67,7 +67,7 @@ body.page-home {
         color: white;
     }
 
-    #main-photo {
+    .main-photo {
         float: right;
         width: 25em;
         border: 1px solid white;
@@ -104,7 +104,6 @@ body.page-home {
     }
 
     .emailSignup {
-        clear: both;
         margin: 1em 0 1em 0;
         padding: 0.25em;
         border: 2px solid black;
@@ -201,6 +200,12 @@ body[class *= 'secondary'] {
         margin-bottom: 1em;
     }
 
+    .main-photo {
+        float: right;
+        width: 25em;
+        border: 1px solid white;
+        margin-top: 0.5em;
+    }
 }
 
 
