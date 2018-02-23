@@ -321,6 +321,21 @@ body[class *= 'secondary'] {
 
 }
 
+// --- Special treatment for Registry ---
+
+body[class *= 'page-registry'] {
+
+    ul {
+        margin-top: 1em;
+
+        li {        
+            font-size: 150%;
+            list-style-type: square;
+            list-style-position: inside;
+        }
+    }
+}
+
 // --- Special treatment for FAQs ---
 
 body[class *= 'page-faq'] {
@@ -342,6 +357,10 @@ body[class *= 'page-faq'] {
     }
     .faq-a p:first-child:before {
         content: "A. ";
+    }
+
+    .main-photo {
+        border-color: #ccc;
     }
 }
 
