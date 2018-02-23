@@ -5,3 +5,61 @@ photo-url:
 photo-alt: 
 photo-title: 
 ---
+<script>
+    function writeMailtoLink(text, addrWriter) {
+        document.write('<a href="ma');
+        document.write('ilto');
+        document.write(':');
+        addrWriter();
+        document.write('"">');
+        document.write(text);
+        document.write('</a>');
+    }
+
+    function writeMAFEmail() {
+        document.write('matthias.ferber');
+        document.write('@');
+        document.write('gma');
+        document.write('il.');
+        document.write('com');
+    }
+
+    function writeRAWEmail() {
+        document.write('rebecca.wrigley');
+        document.write('@');
+        document.write('gma');
+        document.write('il.');
+        document.write('com');
+    }
+
+    function writeMAFEmailLink() {
+        writeMailtoLink('Matthias', writeMAFEmail);
+    }
+
+    function writeRAWEmailLink() {
+        writeMailtoLink('Rebecca', writeRAWEmail);
+    }
+
+    function writeBothEmailLink() {
+        writeMailtoLink('Both of us', function() {
+            writeMAFEmail();
+            document.write(',');
+            writeRAWEmail();
+        })
+    }
+
+</script>
+
+<a href="mailto:honeypot@mailinator.com" aria-hidden="true" tabindex="-1" style="display: none;">honeypot@mailinator.com</a>
+
+<div class="contact">
+    <p>Got questions? Email us:</p>
+
+    <ul class="contactEmail">
+        <li><script>writeMAFEmailLink();</script></li>
+        <li><script>writeRAWEmailLink()</script></li>
+        <li><script>writeBothEmailLink()</script></li>
+    </ul>
+
+    <p>Or call Matthias at <span class="tel">617-909-5685</span>.</p>
+</div>

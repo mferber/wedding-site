@@ -191,20 +191,6 @@ body.page-home {
     #emailSignupResponse.failure {
         color: red;
     }
-
-    ul.contactEmail {
-        padding: 0;
-        list-style-type: none;
-    
-        li {
-            display: inline;
-            list-style-type: none;
-        }
-
-        li + li::before {
-            content: ' • ';
-        }
-    }
 }
 
 // Mobile adjustments
@@ -298,7 +284,6 @@ body[class *= 'secondary'] {
         margin-top: 1em;
         border: 2px solid white;
         border-radius: 20px;
-
     }
 }
 
@@ -358,5 +343,24 @@ body[class *= 'page-faq'] {
     .faq-a p:first-child:before {
         content: "A. ";
     }
+}
 
+// --- Special treatment for Contact page
+
+body[class *= 'page-contact'] {
+
+    ul.contactEmail {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        li {
+            font-size: 160%;
+            list-style-type: square;
+            list-style-position: inside;
+        }
+    }
+
+    .tel {
+        font-size: 110%;
+        font-weight: bold;
+    }
 }
