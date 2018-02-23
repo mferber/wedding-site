@@ -1,4 +1,4 @@
-function setup() {
+function setupEmailCollection() {
 	$('#submitBtn').click(function() {
 		var params = {
 			name: $('input#name').val(),
