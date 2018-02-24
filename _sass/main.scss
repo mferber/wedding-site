@@ -41,13 +41,31 @@ body {
     margin: 1em 1em 10em 1em;
 }
 
+h1 {
+    font-family: gorey;
+    font-size: 200%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-family: gorey;
+    font-size: 150%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
 p {
     line-height: 1.25;
     font-size: 140%;
 }
 
 p + p {
-    margin-top: 1em;
+    margin-top: 0.5em;
+}
+
+i {
+    font-style: italic;
 }
 
 a {
@@ -175,13 +193,16 @@ body.page-home {
         }
 
         input[type='button'] {
-            font-size: 100%;;
+            font-size: 100%;
         }
     }
 
     #emailSignupResponse {
-        margin: 0.5em 0 1em 0;
-        font-size: 120%;
+        font-size: 150%;
+        text-align: center;
+        margin: 1em auto 0 auto;
+        width: 80%;
+        height: 2em;
     }
 
     #emailSignupResponse.success {
@@ -245,6 +266,10 @@ body.page-home {
         .emailSignup .caption {
             width: 90%;
         }
+
+        #emailSignupResponse {
+            width: 100%;
+        }
     }
 }
 
@@ -272,7 +297,7 @@ body[class *= 'secondary'] {
 
     .secondary-page-title {
         font-family: "gorey";
-        font-size: 180%;
+        font-size: 200%;
         color: white;
         margin-top: 0.5em;
         margin-bottom: 1.25em;
@@ -281,9 +306,9 @@ body[class *= 'secondary'] {
     .main-photo {
         float: right;
         width: 30em;
-        margin-top: 1em;
         border: 2px solid white;
         border-radius: 20px;
+        margin: 1em 0 1em 1em;
     }
 }
 
@@ -312,7 +337,6 @@ body[class *= 'secondary'] {
 
         .secondary-page-title {
             text-align: center;
-            font-size: 180%;
             color: $color-bg;
             margin-top: 1em;
             margin-bottom: 0.5em;
@@ -321,18 +345,67 @@ body[class *= 'secondary'] {
 
 }
 
+// --- Special treatment for Event page ---
+
+body[class *= 'page-event'] {
+
+    p.address {
+        font-family: gorey;
+        font-size: 180%;
+    }
+
+    img.area-map {
+        width: 100%;
+        margin-top: 2em;
+    }
+}
+
+// --- Special treatment for Lodging ---
+
+body[class *= 'page-lodging'] {
+
+    .hotel {
+        font-size: 140%;
+        margin-top: 2em;
+        line-height: 1.5;
+
+        .name {
+            font-family: gorey;
+            font-size: 140%;
+            margin-bottom: 0.1em;
+        }
+        .address {
+            font-size: 120%;
+            line-height: 1.0;
+        }
+        .tel {
+            font-size: 120%;
+        }
+        .cost {
+            font-size: 100%;
+        }
+    }
+}
+
 // --- Special treatment for Registry ---
 
 body[class *= 'page-registry'] {
 
     ul {
         margin-top: 1em;
+        margin-left: 2em;
 
         li {        
             font-size: 150%;
             list-style-type: square;
-            list-style-position: inside;
+            list-style-position: outside;
+            padding-left: 0.5em;
+            margin-bottom: 0.5em;
         }
+    }
+
+    .footnote {
+        margin-top: 1em;
     }
 }
 
@@ -340,15 +413,19 @@ body[class *= 'page-registry'] {
 
 body[class *= 'page-faq'] {
 
+    .main-photo {
+        border-color: #ccc;
+    }
+
     .faq-q p {
         font-family: gorey;
         font-weight: bold;
-        font-size: 125%;
-        margin-bottom: 0.5em;
+        font-size: 150%;
+        margin-bottom: 0.6em;
     }
 
     .faq + .faq {
-        margin-top: 1em;
+        margin-top: 2em;
     }
 
     /* Insert Q. and A. before questions and answers */
@@ -359,8 +436,22 @@ body[class *= 'page-faq'] {
         content: "A. ";
     }
 
-    .main-photo {
-        border-color: #ccc;
+    img.embedded {
+        max-width: 30em;
+        max-height: 30em;
+        margin: 2em auto;
+        display: block;
+    }
+}
+
+// Mobile adjustments
+
+@media screen and (max-device-width: 736px) {
+
+    body[class *= 'page-faq'] {
+        img.embedded {
+            width: 80%;
+        }
     }
 }
 

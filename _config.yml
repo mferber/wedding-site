@@ -1,3 +1,4 @@
+include: ['.htaccess', '.htpasswd']
 defaults:
   -
     scope:
