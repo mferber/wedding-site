@@ -55,13 +55,34 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-p {
+p, ul {
     line-height: 1.25;
     font-size: 140%;
 }
 
-p + p {
+ul ul {
+    font-size: 100%
+}
+
+p + p, p + ul, ul + p {
     margin-top: 0.5em;
+}
+
+ul {
+    margin-left: 2em;
+    list-style: disc outside
+}
+
+ul li + li {
+    margin-top: 0.25em
+}
+
+.linespace {
+    line-height: 0.25em;
+}
+
+b {
+    font-weight: bold;
 }
 
 i {
@@ -135,14 +156,17 @@ body.page-home {
 
     .main-nav-menu {
         font-family: gorey;
-        font-size: 190%;
+        font-size: 125%;
         margin-top: 0.5em;
         margin-bottom: 1.5em;
 
+        ul {
+            list-style: outside url('/assets/home-page-bullet.png');
+        }
+
         li {
-            background: url('/assets/home-page-bullet-temporary.png') left center no-repeat;
-            padding-left: 50px;
-            height: 50px;
+            padding-left: 5px;
+            height: 30px;
         }
 
         a {
@@ -358,7 +382,7 @@ body[class *= 'page-event'] {
 
     p.address {
         font-family: gorey;
-        font-size: 180%;
+        font-size: 150%;
     }
 
     img.area-map {
@@ -401,14 +425,6 @@ body[class *= 'page-registry'] {
     ul {
         margin-top: 1em;
         margin-left: 2em;
-
-        li {        
-            font-size: 150%;
-            list-style-type: square;
-            list-style-position: outside;
-            padding-left: 0.5em;
-            margin-bottom: 0.5em;
-        }
     }
 
     .footnote {
