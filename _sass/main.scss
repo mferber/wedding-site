@@ -181,6 +181,8 @@ body.page-home {
     }
 
     .emailSignup {
+        display: none;  /* Didn't prove helpful; removing shortly before wedding */
+        
         margin: 1em 0 1em 0;
         padding: 0.25em;
         border: 2px solid black;
@@ -285,12 +287,19 @@ body.page-home {
         .main-nav-menu {
             margin: 0 auto;
             text-align: center;
-            font-size: 165%;
+            font-size: 125%;
+            line-height: normal;
 
-            li {
-                height: 200%;
-                padding-left: 0;
-                background: transparent;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    height: 200%;
+                    padding-left: 0;
+                    background: transparent;
+                }
             }
         }
 
