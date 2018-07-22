@@ -118,7 +118,7 @@ img.frieze {
 // --- Home page ---
 
 body.page-home {
-    background-image: url("/assets/bg/home.png");
+    background-image: url("../assets/bg/home.png");
     background-repeat: repeat-x;
 
     .site-main-title {
@@ -161,7 +161,7 @@ body.page-home {
         margin-bottom: 1.5em;
 
         ul {
-            list-style: outside url('/assets/home-page-bullet.png');
+            list-style: outside url('../assets/home-page-bullet.png');
         }
 
         li {
@@ -316,7 +316,7 @@ body.page-home {
 // --- Secondary pages ---
 
 body[class *= 'secondary'] {
-    background-image: url("/assets/bg/secondary.png");
+    background-image: url("../assets/bg/secondary.png");
     background-repeat: repeat-x;
 
     .secondary-nav-menu {
@@ -357,7 +357,7 @@ body[class *= 'secondary'] {
 @media screen and (max-device-width: 736px) {
 
     body[class *= 'secondary'] {
-        background-image: url("/assets/bg/secondary.png");   // FIXME - do this properly
+        background-image: url("../assets/bg/secondary.png");   // FIXME - do this properly
         background-size: 1px 500px;
 
         .secondary-nav-menu {
